@@ -1,0 +1,162 @@
+html, body, .App, #root {
+    height: 100%
+}
+
+body {
+    background-color: gray;
+}
+
+.App {
+    text-align: center;
+}
+
+.App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 80px;
+}
+
+.App-header {
+    background-color: #222;
+    height: 150px;
+    padding: 20px;
+    color: white;
+}
+
+.App-title {
+    font-size: 1.5em;
+}
+
+.App-intro {
+    font-size: large;
+}
+
+.vcontainer {
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: stretch;
+}
+
+.hcontainer {
+    display:flex;
+    flex-direction: row;
+    align-items: stretch;
+    order:1;
+}
+
+.live-chat {
+    order:2;
+    flex-grow: 1
+}
+
+.user-list {
+    order:2;
+    flex-grow: 1
+}
+
+/* sidebar */
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+    position: fixed;
+    width: 36px;
+    height: 30px;
+    right: 36px;
+    top: 140px;
+  }
+  
+  /* Color/shape of burger icon bars */
+  .bm-burger-bars {
+    background: rgb(218, 231, 241);
+  }
+  
+  /* Position and sizing of clickable cross button */
+  .bm-cross-button {
+    height: 24px;
+    width: 24px;
+  }
+  
+  /* Color/shape of close button cross */
+  .bm-cross {
+    background: #bdc3c7;
+  }
+  
+  /* General sidebar styles */
+  .bm-menu {
+    /* background: rgba(151, 105, 245, 0.98); */
+    background: rgba(64, 70, 86, 0.98);
+    padding: 0px;
+    font-size: 1.15em;
+  }
+
+  .bm-menu-wrap {
+      height: auto;
+      width: 325px;
+      box-shadow: 1px 10px 10px 0px rgba(0, 0, 0, 0.5);
+      bottom: 2%;
+      top: 15%;
+  }
+  
+  /* Morph shape necessary with bubble or elastic */
+  .bm-morph-shape {
+    fill: #373a47;
+  }
+  
+  /* Wrapper for item list */
+  .bm-item-list {
+    color: rgb(218, 231, 241);
+    padding: 0.8em;
+  }
+
+  .user-side {
+    /* color: rgba(64, 70, 86, 0.98); */
+    color: rgba(151, 105, 245, 0.98);
+    list-style-type: none;
+  }
+
+ #create-question-container {
+     color: gray;
+     /*margin-top: -80px;*/
+ }
+
+ #create-question-container {
+     text-align: left
+ }
+
+#create-question-container label {
+   color: white;
+}
+
+#create-question-container input, textarea {
+    font-size: 16px;
+    border-bottom: 1px solid rgba(255, 252, 232, 0.1);
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 15px;
+    width: 100%
+}
+
+#create-question-container h4 {
+    color: white;
+    margin-top: 10px;
+}
+
+.create-question-test{
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+ #create-main{
+    width: 400px;
+  }
+  
+  #create-main-child{
+    width: auto;
+  }
+
+
+
+.form-group{
+     color: gray;
+ }
