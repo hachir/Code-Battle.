@@ -39,4 +39,23 @@ const sandBoxEval = (strCode, index, blnExecOnly) => {
       resolve({data: e.data, index: index});
       worker.terminate();
     };
-    
+    worker.onerror = function (e) { // code evaluated, results arriving
+        var m = e.message;
+        e = {
+          toString: function () {
+            return m + "\n" + Object.keys(e.e).map(function (a) {
+              if (this[a] == null || typeof this[a] === "object") return;
+              return a + ": \t" + this[a]
+            }, e.e).filter(Boolean).join("\n");
+          }, e: e
+        };
+        // cb(e, null, code, worker); // invoke callback with result, null as the event object to indicate errror, and some extra arguments for routing
+        reject(e.e);
+        worker.terminate();
+      };
+  
+      return worker;
+    });
+  };
+  
+  export default sandBoxEval;
