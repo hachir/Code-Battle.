@@ -1,4 +1,4 @@
-gimport React, {Component} from "react";
+import React, {Component} from "react";
 import sandBoxEval from "../../Util/SandboxEval";
 import Editor from "../Editor/Editor";
 import CodeTests from "../CodeTests/CodeTests";
