@@ -35,7 +35,18 @@ export default class LiveChat extends Component {
 
   onSubmit = (e) => {
     e.preventDefault();
-  
+    // Check if the message is empty
+    const message = this.refs.txtMessage.value;
+    if (message.length === 0) {
+      return;
+    }
+    // Build a message object and send it
+    const messageObj = {
+      Who: this.props.username,
+      What: message,
+      When: new Date().valueOf(),
+    };
+    this.sendMessage(messageObj);
     // Clear the input field and set focus
     this.refs.txtMessage.value = "";
     this.refs.txtMessage.focus();
