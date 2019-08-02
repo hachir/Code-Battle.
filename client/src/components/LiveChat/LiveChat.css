@@ -78,3 +78,38 @@
     -moz-border-radius: 20px;
     border-radius: 20px;
   }
+
+  .avatar {
+    width: 40px;
+  }
+  .avatar img {
+    width: 100%;
+    display: block;
+  }
+  
+  #currentChat{
+    padding: 0px;
+  }
+
+  .chatHeader{
+    color: rgba(64, 70, 86, 0.98);
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .messageText{
+    margin-bottom: 3px;
+  }
+
+  .chatInput {
+    border-width: 2px;
+    border-color:rgba(151, 105, 245, 0.98);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    width: auto;
+  }
+
+  .chatInput:focus {
+    outline-width: 0;
+}
