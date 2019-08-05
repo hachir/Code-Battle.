@@ -9,6 +9,23 @@ import axios from "axios";
 
 class Navbar extends Component {
 
+  logout = (event) => {
+    event.preventDefault();
+    console.log("logging out");
+    axios.post("/user/logout").then(response => {
+      console.log(response.data);
+      if (response.status === 200) {
+        this.props.loginHandler({
+          loggedIn: false,
+          username: null,
+          userscore: 0
+        });
+        this.props.history.push("/");
+      }
+    }).catch(error => {
+      console.log("Logout error" + error);
+    });
+  };
 
   render() {
     return (
