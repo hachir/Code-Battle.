@@ -9,3 +9,22 @@ navbar {
     text-transform: capitalize;
     box-shadow: 0 5px 5px -5px #333;
 }
+.navbar a:hover:not(.logo) {
+    background-color: #8D71EB;
+    color: #fff;
+}
+
+.navbar a:hover {
+    text-decoration: none;
+}
+
+.navbar a {
+    outline: none;
+    line-height: 80px;
+    height: 100px;
+}
+
+.logo {
+    font-size: 1.4rem;
+}
+
