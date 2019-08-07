@@ -2,7 +2,9 @@ import React, {Component} from "react";
 import User from "./User/User";
 import "./UserList.css";
 
+// import Sidebar from './UserSideBar';
 
+class UserList extends Component {
   /*state = {
     presentUsers: []
   };*/
