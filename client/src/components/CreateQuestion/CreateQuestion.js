@@ -54,7 +54,53 @@ class CreateQuestion extends Component {
     this.setState({tests: updatedTests});
   };
 
- 
+  render() {
+
+    let testRender = this.state.tests.map((test, index) => <input
+        onChange={(event) => this.handleTestChange(event, index)}
+        key={index}
+        name={`test-${index}`}
+        className='create-question-test'
+        placeholder="reverse('abc') === 'cba'"
+        value={test}
+    />);
+    return (
+        <Wrapper id='create-question-form'>
+          <label htmlFor="questionText">Challenge</label>
+          <textarea
+              value={this.state.questionText}
+              onChange={this.handleInputChange}
+              name="questionText"
+              id='question-text'
+              placeholder="Create a function that..."
+          />
+          <label htmlFor="code">Method Signature</label>
+          <input
+              value={this.state.code}
+              onChange={this.handleInputChange}
+              name="code"
+              id='code-text'
+              placeholder="myFunction(param1, [param2..])"
+          />
+          <label htmlFor="test-0">Tests</label>
+          {testRender}
+          <div className='button-section-child' id='button-section-two'>
+            <button
+                className='gray'
+                name="custom-question"
+                onClick={this.addTest}
+                type='button'>Add Test
+            </button>
+            <button
+                className='gray'
+                name="custom-question"
+                onClick={this.createCustomGame}
+                disabled={this.state.questionText === "" || this.state.code === "" || this.state.tests[0] === ""}
+                type='button'>Create Game
+            </button>
+          </div>
+        </Wrapper>
+
     );
   }
 }
