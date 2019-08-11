@@ -59,6 +59,27 @@ class LoginPopup extends Component {
     });
   };
 
+  handleSignup = () => {
+    //request to server to add a new username/password
+    axios.post("/user/", {
+      username: this.state.username,
+      password: this.state.password
+    })
+        .then(response => {
+          console.log(response);
+          if (!response.data.error) {
+            console.log("successful signup");
+            // Automatically log user in after sign up
+            this.handleLogin();
+          } else {
+            this.setState({
+              message: "Username already taken",
+            });
+          }
+        }).catch(err => {
+      console.log(err);
+    });
+  };
 
   handleGuest = () => {
     // Generate random username
