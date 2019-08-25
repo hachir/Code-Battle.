@@ -69,6 +69,11 @@ export default class InstructionsText extends React.Component {
                     //   <img className="demo4-photo" src={`./${i}.jpg`} style={style} />
                       <p>{this.state.instructions[{i}]}</p>
                     }
+                    </Motion>
+                )}
+              </div>
+            }
+          </Motion>
         </div>
       </div>
     );
