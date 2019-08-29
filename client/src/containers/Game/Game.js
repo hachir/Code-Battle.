@@ -286,7 +286,35 @@ class Game extends Component {
         </div>
     );
 
-   
+    if (this.state.gameStarted) {
+      game = (
+          <Wrapper>
+            <div className="countdown">
+              <Countdown
+                  date={Date.now() + this.state.gameTimeMillis}
+                  renderer={renderer}
+                  controller
+                  onTick={this.countdown}
+                  onComplete={this.timeFinishedHandler}/>
+            </div>
+
+            {codeSpace}
+          </Wrapper>
+      );
+    }
+
+    return (
+        <main id="game-main">
+          <GameSummaryPopup showSummary={this.state.gameEnded}
+                            gameResults={this.state.leaderBoard}/>
+          <Sidebar pubnub={this.props.pubnub}
+                   defaultChannel={this.state.gameChannel + "-users"}
+                   gameChannel={this.state.gameChannel + "-chat"}
+                   username={this.props.username}
+                   presentUsers={this.props.presentUsers}
+                   usersChange={this.props.usersChange}/>
+          <div className="game-container">
+            {game}
           </div>
         </main>
     );
