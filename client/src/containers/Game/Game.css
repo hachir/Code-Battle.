@@ -1,0 +1,30 @@
+.game-container {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    margin: 5vh auto 10vh auto;
+    width: 80%;
+}
+
+#game-main {
+    display: flex;
+    flex-grow: 1;
+    align-items: flex-start;
+}
+
+
+.codespace {
+    width: 100%
+}
+
+.countdown {
+    color: white;
+    font-size: 34px;
+    background-color: #6950B3;
+    -webkit-box-shadow: 0 0 2px 10px;
+    box-shadow: 0 0 2px 4px #414141;
+    padding: 0 8px;
+    margin: auto;
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
