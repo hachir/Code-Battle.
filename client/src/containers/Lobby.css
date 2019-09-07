@@ -399,3 +399,47 @@
 	flex-grow: 1;
 	align-items: flex-start;
 }
+
+.leaderboard-container {
+	top: 0;
+	left: 0;
+	background-color: #404656fa;
+	display: inherit;
+	max-height: 450px;
+}
+
+.game-IN-PROGRESS,
+.game-NEW,
+.game-COMPLETED {
+	font-size: 14px;
+	display: block;
+	margin-top: 5px;
+}
+
+.game-IN-PROGRESS {
+	color: #ffd21c;
+	text-transform: lowercase;
+}
+
+.game-NEW {
+	color: #3fec3f;
+	animation: pulse 1.2s infinite;
+	text-transform: lowercase;
+}
+
+.game-COMPLETED {
+	color: #ff7777;
+	text-transform: lowercase;
+}
+
+@keyframes pulse {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.2;
+	}
+	100% {
+		opacity: 1;
+	}
+}
